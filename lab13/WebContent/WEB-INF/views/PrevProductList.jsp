@@ -13,11 +13,13 @@
 					<th>Product</th>
 					<th>Price</th>
 					<th>Quantity</th>
+					<th>Action</th>
 				</tr>
 				<tr>
 					<td>Product1</td>
 					<td>Price1</td>
 					<td>Quantity1</td>
+					<td><a href="https://www.google.com">Delete</a></td>
 				</tr>
 				<tr>
 					<td>Product2</td>
