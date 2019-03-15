@@ -78,7 +78,7 @@ public class LoginServlet extends HttpServlet {
 					response.addCookie(cookie);
 				}
 				
-				response.sendRedirect("pages/welcome.jsp");
+				response.sendRedirect("store");
 				
 			}else {
 			session.setAttribute("loggedIn", false);

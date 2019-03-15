@@ -12,6 +12,7 @@
 
 	<div class="container">
 		<h1>Book Store</h1>
+		<a href="<c:url value="/login.jsp"></c:url>">Login</a>
 		<table>
 			<thead>
 				<tr>
