@@ -38,7 +38,9 @@
 	</div>
 	</br>
 	<div class="container">
-		Subtotal (${varCount} items): $ ${varSum} 
+		Subtotal:
+		 <p> Items: ${varCount} </p>
+		 <p> Value: ${varSum} </p> 
 		<div>
 		</br>
 			<button onclick="">Proceed to checkout</button>
