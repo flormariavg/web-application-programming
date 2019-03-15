@@ -1,19 +1,27 @@
 @charset "utf-8";
+
 .left {
-    float: left;
-    width: 50%;
+	float: left;
+	width: 50%;
 }
 
 .right {
-    float: right;
-    width: 50%;
+	float: right;
+	width: 50%;
 }
 
-table{
-	border: solid #8080ff 3px;
+.label-checkout {
+	float: right;
+	width: 100%;
 }
 
-.border-bottom{
+.border-bottom {
 	border-bottom: 3px solid black;
 	width: 80%;
+}
+
+.button-checkout {
+	float: center;
+	width: 100%;
+	font-stretch: wider;
 }

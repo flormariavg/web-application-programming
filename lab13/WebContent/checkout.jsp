@@ -40,13 +40,18 @@
 			</p>
 			<table>
 				<tr>
-				<label><input type="radio" name="payment" value="credit"> CreditCard</label><br>
+					<label><input type="radio" name="payment" value="credit">
+						CreditCard</label>
+					<br>
 				</tr>
 				<tr>
-				<label><input type="radio" name="payment" value="debit"> DebitCard</label><br>
+					<label><input type="radio" name="payment" value="debit">
+						DebitCard</label>
+					<br>
 				</tr>
 				<tr>
-				<label><input type="radio" name="payment" value="other"> Other</label>
+					<label><input type="radio" name="payment" value="other">
+						Other</label>
 				</tr>
 			</table>
 			<p class="border-bottom">
@@ -79,14 +84,36 @@
 
 	<div class="right">
 		<div id="div2">
-			<p class="border-bottom">Order confirmation</p><br>
-			<p>Products </p>
-			<p class="border-bottom"><strong>Total of the order</strong></p>
+			<p class="border-bottom">
+				<strong>Order confirmation</strong>
+			</p>
+			<table>
+				<tr>
+					<td>Products:</td>
+					<td><label class="label-checkout" name="totalproducts">$60.00</label></td>
+				</tr>
+				<tr>
+					<td>Shipping:</td>
+					<td><label class="label-checkout" name="shipping">$2.41</label></td>
+				</tr>
+			</table>
+
+
+			<p class="border-bottom">
+				<strong>Total of the order</strong>
+			</p>
+						<table>
+				<tr>
+					<td>Total:</td>
+					<td><label class="label-checkout" name="totalall">$62.41</label></td>
+				</tr>
+			</table>
 		</div>
 		<div id="div3">
-			    <form action="/login" method="post">  
-        <button>Proceed</button><br>
-    </form>
+			<form action="/login" method="post">
+				<button class="button-checkout">Proceed</button>
+				<br>
+			</form>
 		</div>
 	</div>
 </body>
