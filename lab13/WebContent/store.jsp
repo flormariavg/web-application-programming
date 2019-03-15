@@ -30,6 +30,7 @@
 						<td>${item.name}</td>
 						<td>${item.unitPrice}</td>
 						<td><button onclick="">Add Cart</button> </td>
+						<a href="<c:url value="/addItem"><c:param name="paramId" value="12" /></c:url>">Product Frum</a>
 						
 					</tr>
 				</c:forEach>
