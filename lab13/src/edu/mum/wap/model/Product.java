@@ -18,6 +18,9 @@ public class Product implements Serializable {
 	public Item getProduct() {
 		return product;
 	}
+	public double getProductPrice(Item prod) {
+		return prod.getUnitPrice();
+	}
 	public void setProduct(Item product) {
 		this.product = product;
 	}
