@@ -10,7 +10,14 @@ public class Product implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	private int quantity;
+<<<<<<< HEAD
     private Item item;
+=======
+    private Item product;
+    public Product() {
+		// TODO Auto-generated constructor stub
+	}
+>>>>>>> branch 'master' of https://github.com/flormariavg/web-application-programming.git
 	public int getQuantity() {
 		return quantity;
 	}
@@ -20,6 +27,7 @@ public class Product implements Serializable {
 	public Item getItem() {
 		return item;
 	}
+<<<<<<< HEAD
 	public void setItem(Item item) {
 		this.item = item;
 	}
@@ -52,6 +60,16 @@ public class Product implements Serializable {
 			
 		}
 		
+=======
+	public double getProductPrice(Item prod) {
+		return prod.getUnitPrice();
 	}
-	
+	public void setProduct(Item product) {
+		this.product = product;
+>>>>>>> branch 'master' of https://github.com/flormariavg/web-application-programming.git
+	}
+	public Product(Item prod, int q) {
+		this.product = prod;
+		this.quantity = q;
+	}
 }

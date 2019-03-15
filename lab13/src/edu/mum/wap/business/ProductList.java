@@ -9,11 +9,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import edu.mum.wap.model.CartLine;
 import edu.mum.wap.model.Item;
 
 @WebServlet("/ProductList")
 public class ProductList extends HttpServlet {
-
+	
+	private CartLine cartList;
+	
+	@Override
+	public void init() throws ServletException {
+		cartList = new CartLine();
+	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
