@@ -1,11 +1,16 @@
 package edu.mum.wap.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartLine {
+public class CartLine implements Serializable{
 
-    private int quantity;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int quantity;
     private List<Item> products;
 
     public CartLine() {

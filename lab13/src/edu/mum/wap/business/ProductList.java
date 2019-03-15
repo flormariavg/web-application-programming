@@ -2,12 +2,13 @@ package edu.mum.wap.business;
 
 import java.io.IOException;
 import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import edu.mum.wap.data.Product;
+
 import edu.mum.wap.model.Item;
 
 @WebServlet("/ProductList")
