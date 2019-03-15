@@ -36,7 +36,14 @@
 		</table>
 
 	</div>
-
+	</br>
+	<div class="container">
+		Subtotal (${varCount} items): $ ${varSum} 
+		<div>
+		</br>
+			<button onclick="">Proceed to checkout</button>
+		</div>
+	</div>
 
 </body>
 </html>
