@@ -1,11 +1,15 @@
 package edu.mum.wap.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Item {
+public class Item implements Serializable{
 
-	private int id;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2477582562598788698L;
 	private String code;
 	private String image;
 	private String name;
@@ -15,35 +19,25 @@ public class Item {
 	private boolean inStock;
 
 	public Item() {
-		this.code = UUID.randomUUID().toString();
-//		this.code = name+hashCode();
+		this.code = name+"+"+hashCode();
 	}
 
-	public Item(int id, String name,  String description, double unitPrice, int quantity, boolean inStock) {
-		this.id = id;
+	public Item(String name,  String description, double unitPrice, int quantity, boolean inStock) {
 		this.name = name;
 		this.description = description;
 		this.unitPrice = unitPrice;
 		this.quantity = quantity;
 		this.inStock = inStock;
-//		this.code = name+String.valueOf(hashCode());
+		setCode(name);
 	}
 
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getCode() {
 		return code;
 	}
 
 	public void setCode(String code) {
-		this.code = code;
+		this.code = name+"+"+hashCode();
 	}
 
 	public String getName() {
@@ -111,9 +105,11 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", description=" + description
+		return "Item [code=" + code + ", image=" + image + ", name=" + name + ", description=" + description
 				+ ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", inStock=" + inStock + "]";
 	}
+
+	
 
 
 	

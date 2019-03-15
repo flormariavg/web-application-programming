@@ -1,4 +1,4 @@
-package edu.mum.wap.business;
+package edu.mum.wap.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -27,7 +27,7 @@ public class AddItem extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println(request.getParameter("paramId"));
+		System.out.println(request.getParameter("item"));
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

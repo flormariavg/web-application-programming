@@ -1,4 +1,4 @@
-package edu.mum.wap.business;
+package edu.mum.wap.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import edu.mum.wap.data.Product;
+import edu.mum.wap.model.CartLine;
 import edu.mum.wap.model.Item;
 
 /**
@@ -35,7 +35,9 @@ public class LoadItem extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=UTF-8");
-		List<Item> products = Product.setProducts();
+		
+		CartLine cartLine= new CartLine();
+		List<Item> products = cartLine.setItems();
 		for (Item item : products) {
 			System.out.println(item);
 		}
@@ -58,10 +60,11 @@ public class LoadItem extends HttpServlet {
 	}
 
 	public static void main(String[] args) {
-		List<Item> products = Product.setProducts();
+		List<Item> products = CartLine.setItems();
 		for (Item item : products) {
 			System.out.println(item);
 			
 		}
+		
 	}
 }

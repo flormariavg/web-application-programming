@@ -26,11 +26,11 @@
 				<c:forEach items="${products}" var="item">
 					<tr>
 						<td></td>
-						<td>${item.id}</td>
 						<td>${item.name}</td>
+						<td>${item.description}</td>
 						<td>${item.unitPrice}</td>
-						<td><button onclick="">Add Cart</button> </td>
-						<a href="<c:url value="/addItem"><c:param name="paramId" value="12" /></c:url>">Product Frum</a>
+						<td><a href="<c:url value="/addItem"><c:param name="item" value="${item.code}" /></c:url>">Add Cart</a></td>
+						
 						
 					</tr>
 				</c:forEach>

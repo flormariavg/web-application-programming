@@ -1,4 +1,4 @@
-package edu.mum.wap.data;
+package edu.mum.wap.model;
 
 import java.util.List;
 
