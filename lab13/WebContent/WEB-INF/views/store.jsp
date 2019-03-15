@@ -10,7 +10,7 @@
 	<div >
 		<table >
 				<tr>
-					<th>Product<p class=class="border-bottom">pruebalo</p></th>
+					<th>Product</th>
 					<th>Price</th>
 					<th>Quantity</th>
 				</tr>
