@@ -1,6 +1,7 @@
 package edu.mum.wap.model;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class Item {
 
@@ -13,8 +14,8 @@ public class Item {
 	private boolean inStock;
 
 	public Item() {
-//		this.code = UUID.randomUUID().toString();
-		this.code = name+hashCode();
+		this.code = UUID.randomUUID().toString();
+//		this.code = name+hashCode();
 	}
 
 	public Item(int id, String name,  String description, double unitPrice, int quantity, boolean inStock) {
@@ -24,6 +25,7 @@ public class Item {
 		this.unitPrice = unitPrice;
 		this.quantity = quantity;
 		this.inStock = inStock;
+//		this.code = name+String.valueOf(hashCode());
 	}
 
 
