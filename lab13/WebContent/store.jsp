@@ -35,7 +35,7 @@
 					</tr>
 				</c:forEach>
 		</table>
-
+		<a href="<c:url value="/cart"></c:url>">Cart</a>
 	</div>
 
 

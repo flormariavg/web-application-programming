@@ -7,6 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import edu.mum.wap.model.ShoppingCart;
 
 @WebServlet("/checkout")
 public class Checkout extends HttpServlet {
@@ -21,7 +24,22 @@ public class Checkout extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("checkout.jsp").forward(request, response);
+		
+HttpSession session= request.getSession();
+		
+		
+		ShoppingCart shoppingCart= (ShoppingCart) session.getAttribute("shoppingCart");
+		if(session.getAttribute("shoppingCart")!=null) {
+			System.out.println("Cart********************************");
+			System.out.println("shoppingCart"+shoppingCart);
+			
+			
+			request.getRequestDispatcher("checkout.jsp").forward(request, response);
+		}else {
+			System.out.println("Error****************");
+			
+		}
+
 	}
 
 	/**

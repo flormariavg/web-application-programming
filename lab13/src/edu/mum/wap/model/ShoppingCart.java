@@ -1,6 +1,7 @@
 package edu.mum.wap.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart implements Serializable{
@@ -10,41 +11,35 @@ public class ShoppingCart implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private String id;
+	private String user;
 
-	List<CartLine> cartLineList;
-
+	List<Product> products;
+	
 	public ShoppingCart() {
+		// TODO Auto-generated constructor stub
+		products= new  ArrayList<>();
 	}
 
-	public void addToCart(CartLine cartLine){
-		cartLineList.add(cartLine);
+	public String getUser() {
+		return user;
 	}
 
-	public void removeFromCart(CartLine cartLine){
-		cartLineList.remove(cartLine);
+	public void setUser(String user) {
+		this.user = user;
 	}
 
-	public void changeQuantity(CartLine cartLine){
+	public List<Product> getProducts() {
+		return products;
 	}
 
-	public void checkout(){
+	public void addProducts(Product product) {
+		this.products.add(product);
 	}
 
-	public List<CartLine> getCartLineList() {
-		return cartLineList;
+	@Override
+	public String toString() {
+		return "ShoppingCart [user=" + user + ", products=" + products + "]";
 	}
-
-	public void setCartLineList(List<CartLine> cartLineList) {
-		this.cartLineList = cartLineList;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
+	
+	
 }

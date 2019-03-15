@@ -23,12 +23,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${Product.getProducts()}" var="item">
+				<c:forEach items="${shoppingCart.products}" var="product">
 					<tr>
 						<td></td>
-						<td>${item.getDescription()}</td>
-						<td>${item.getUnitPrice()}</td>
-						<td>${item.getQuantity()}</td>
+						<td>${product.item.description}</td>
+						<td>${product.item.unitPrice}</td>
+						<td></td>
 						<td><button onclick="">Delete</button> </td>
 						
 					</tr>
@@ -43,7 +43,7 @@
 		 <p> Value: ${varSum} </p> 
 		<div>
 		</br>
-			<button onclick="">Proceed to checkout</button>
+			<a href="<c:url value="/checkout"></c:url>">Proceed to checkout</a>
 		</div>
 	</div>
 
