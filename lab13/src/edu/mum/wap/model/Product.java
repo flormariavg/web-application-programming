@@ -21,5 +21,8 @@ public class Product implements Serializable {
 	public void setProduct(Item product) {
 		this.product = product;
 	}
-	
+	public Product(Item prod, int q) {
+		this.product = prod;
+		this.quantity = q;
+	}
 }
