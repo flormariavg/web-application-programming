@@ -9,6 +9,9 @@ public class Product implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int quantity;
     private Item product;
+    public Product() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getQuantity() {
 		return quantity;
 	}
