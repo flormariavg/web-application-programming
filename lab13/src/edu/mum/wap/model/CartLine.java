@@ -10,26 +10,18 @@ public class CartLine implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private int quantity;
-    private List<Item> products;
-
+    private List<Product> products;
+    
     public CartLine() {
+		// TODO Auto-generated constructor stub
     	products= new ArrayList<>();
-    }
+	}
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-	public List<Item> getProducts() {
+	public List<Product> getProducts() {
 		return products;
 	}
 
-	public void addProducts(Item product) {
+	public void addProducts(Product product) {
 		this.products.add(product);
 	}
 
