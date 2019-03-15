@@ -28,7 +28,11 @@ public class ShoppingCart implements Serializable{
 	public void changeQuantity(CartLine cartLine, int quantity){
 		cartLineList.stream().filter(c -> c.equals(cartLine)).findAny().get().setQuantity(quantity);
 	}
-
+	
+//	public Double calculatedTotalPrice() {
+//		
+//	}
+	
 	public void checkout(){
 	}
 
@@ -47,5 +51,12 @@ public class ShoppingCart implements Serializable{
 	public void setId(String id) {
 		this.id = id;
 	}
-
+	
+	public static void main(String[] args) {
+		List<Item> products = CartLine.setItems();
+		for (Item item : products) {
+			System.out.println(item);
+			
+		}
+	}
 }
