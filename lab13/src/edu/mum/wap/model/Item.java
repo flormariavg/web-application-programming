@@ -7,6 +7,7 @@ public class Item {
 
 	private int id;
 	private String code;
+	private String image;
 	private String name;
 	private String description;
 	private double unitPrice;
@@ -85,6 +86,14 @@ public class Item {
 		this.inStock = inStock;
 	}
 	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
