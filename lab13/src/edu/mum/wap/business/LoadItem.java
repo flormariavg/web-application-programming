@@ -1,7 +1,7 @@
 package edu.mum.wap.business;
 
 import java.io.IOException;
-import java.util.Map;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +15,7 @@ import edu.mum.wap.model.Item;
 /**
  * Servlet implementation class LoadItem
  */
-@WebServlet("/loadItem")
+@WebServlet("/store")
 public class LoadItem extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -34,7 +34,15 @@ public class LoadItem extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html;charset=UTF-8");
+		List<Item> products = Product.setProducts();
+		for (Item item : products) {
+			System.out.println(item);
+		}
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		request.setAttribute("products", products);
+		request.getRequestDispatcher("store.jsp").forward(request, response);
 	}
 
 	/**
@@ -44,20 +52,16 @@ public class LoadItem extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		doGet(request, response);
+		doGet(request, response);
 
-		Map<String, Item> products = Product.setProducts();
-
-		System.out.println(products.get("1"));
-		System.out.println(products.get("2"));
-		System.out.println(products.get("3"));
+		
 	}
 
 	public static void main(String[] args) {
-		Map<String, Item> products = Product.setProducts();
-		
-		System.out.println(products.get("1"));
-		System.out.println(products.get("2"));
-		System.out.println(products.get("3"));
+		List<Item> products = Product.setProducts();
+		for (Item item : products) {
+			System.out.println(item);
+			
+		}
 	}
 }
