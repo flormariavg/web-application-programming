@@ -25,8 +25,7 @@ public class ShoppingCart implements Serializable{
 		cartLineList.remove(cartLine);
 	}
 
-	public void changeQuantity(CartLine cartLine, int quantity){
-		cartLineList.stream().filter(c -> c.equals(cartLine)).findAny().get().setQuantity(quantity);
+	public void changeQuantity(CartLine cartLine){
 	}
 	
 //	public Double calculatedTotalPrice() {
