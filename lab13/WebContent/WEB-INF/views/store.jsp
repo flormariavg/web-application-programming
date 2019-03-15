@@ -1,30 +1,41 @@
-<%@ page language="java" contentType="text/html; charset=ISO-utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Books Store</title>
+	<title>Shopping Cart</title>
+	<link href="./resouces/css/store.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-
-<div class="container">
-	<h1>Shopping Cart</h1>
-	<table>
-		<thead>
-			<tr>
-				<th scope="col">Image</th>
-				<th scope="col">Description</th>
-				<th scope="col">Price</th>
-				<th scope="col">Quantity</th>
-			</tr>
-		</thead>
-
-	</table>
-</div>
-
-
-
-
+	<div >
+		<table >
+				<tr>
+					<th>Product<p class=class="border-bottom">pruebalo</p></th>
+					<th>Price</th>
+					<th>Quantity</th>
+				</tr>
+				<tr>
+					<td>Product1</td>
+					<td>Price1</td>
+					<td>Quantity1</td>
+				</tr>
+				<tr>
+					<td>Product2</td>
+					<td>Price2</td>
+					<td>Quantity2</td>
+				</tr>
+				<tr>
+					<td>Product3</td>
+					<td>Price3</td>
+					<td>Quantity3</td>
+				</tr>
+		</table>
+	</div>
+	</br>
+	<div id="div3">
+	   <form action="/login" method="post">  
+        	<button>Checkout</button><br>
+    	</form>
+	</div>
 </body>
 </html>
