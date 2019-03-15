@@ -8,7 +8,6 @@ import java.nio.file.Path;
 import java.util.List;
 
 import edu.mum.wap.model.Product;
-import edu.mum.wap.model.CartLine;
 import edu.mum.wap.model.ShoppingCart;
 
 public class DataAccessFacade implements DataAccess {
@@ -70,17 +69,17 @@ public class DataAccessFacade implements DataAccess {
 		return (List<Product>) readFromStorage(StorageType.PRODUCTS);
 	}
 	
-	public void saveNewCartLine(CartLine cl) {
-	    List<CartLine> cartLines = readCartLines();
-	    cartLines.add(cl);
-	    saveToStorage(StorageType.CARTLINES,cartLines);
-	}
-	
-	@SuppressWarnings("unchecked")
-	public List<CartLine> readCartLines() {
-		//Returns a product list
-		return (List<CartLine>) readFromStorage(StorageType.CARTLINES);
-	}
+//	public void saveNewCartLine(CartLine cl) {
+//	    List<CartLine> cartLines = readCartLines();
+//	    cartLines.add(cl);
+//	    saveToStorage(StorageType.CARTLINES,cartLines);
+//	}
+//	
+//	@SuppressWarnings("unchecked")
+//	public List<CartLine> readCartLines() {
+//		//Returns a product list
+//		return (List<CartLine>) readFromStorage(StorageType.CARTLINES);
+//	}
 
 	public void saveNewShopList(ShoppingCart sc) {
 		ShoppingCart ShopCarts = readShopList();

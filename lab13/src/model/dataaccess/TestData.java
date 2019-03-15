@@ -1,6 +1,5 @@
 package model.dataaccess;
 
-import edu.mum.wap.model.CartLine;
 import edu.mum.wap.model.Item;
 import edu.mum.wap.model.Product;
 import edu.mum.wap.model.ShoppingCart;
@@ -20,15 +19,17 @@ public class TestData {
 		Product p3 = new Product(item3,4);
 		
 		//my CartLine
-		CartLine cart1 = new CartLine();
-		
-		cart1.addProducts(p1);
-		cart1.addProducts(p2);
-		cart1.addProducts(p3);
+//		CartLine cart1 = new CartLine();
+//		
+//		cart1.addProducts(p1);
+//		cart1.addProducts(p2);
+//		cart1.addProducts(p3);
 		
 		//my Shopping cart
 		ShoppingCart sc1 = new ShoppingCart();
-		sc1.addToCart(cart1);
+		sc1.addProducts(p1);
+		sc1.addProducts(p2);
+		sc1.addProducts(p3);
 		
 		DataAccess da = new DataAccessFacade();
 		System.out.println("Saving the Shopping Cart...");
